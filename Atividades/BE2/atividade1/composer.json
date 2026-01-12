@@ -1,0 +1,9 @@
+{
+    "name": "be2/atividade1",
+    "version": "1.0.0",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}

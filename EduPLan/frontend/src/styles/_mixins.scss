@@ -1,0 +1,197 @@
+@use './variables' as vars;
+
+// Flexbox
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+// Botoes
+@mixin button-base {
+    padding: vars.$spacing-sm vars.$spacing-md;
+    border-radius: vars.$border-radius-sm;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: vars.$font-family;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+@mixin button-primary {
+    @include button-base;
+    background-color: vars.$primary-color;
+    color: vars.$white;
+    
+    &:hover {
+        background-color: vars.$primary-dark;
+    }
+    
+    &:disabled {
+        background-color: vars.$primary-light;
+        cursor: not-allowed;
+    }
+}
+
+@mixin button-secondary {
+    @include button-base;
+    background-color: vars.$white;
+    color: vars.$gray-600;
+    border: 1px solid vars.$gray-400;
+    
+    &:hover {
+        background-color: vars.$gray-200;
+    }
+}
+
+@mixin button-danger {
+    @include button-base;
+    background-color: vars.$danger-color;
+    color: vars.$white;
+    
+    &:hover {
+        background-color: #b91c1c;
+    }
+}
+
+@mixin button-success {
+    @include button-base;
+    background-color: vars.$success-color;
+    color: vars.$white;
+    
+    &:hover {
+        background-color: #047857;
+    }
+}
+
+@mixin button-warning {
+    @include button-base;
+    background-color: vars.$warning-color;
+    color: vars.$white;
+    
+    &:hover {
+        background-color: #b45309;
+    }
+}
+
+// Cards
+@mixin card {
+    background-color: vars.$white;
+    border-radius: vars.$border-radius-md;
+    box-shadow: vars.$shadow-md;
+    padding: vars.$spacing-lg;
+}
+
+// Inputs
+@mixin input-base {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid vars.$gray-400;
+    border-radius: vars.$border-radius-sm;
+    font-size: vars.$font-size-base;
+    font-family: vars.$font-family;
+    box-sizing: border-box;
+    
+    &:focus {
+        outline: none;
+        border-color: vars.$primary-color;
+        box-shadow: 0 0 0 2px rgba(26, 86, 219, 0.2);
+    }
+}
+
+// Status badges
+@mixin status-badge($bg-color, $text-color) {
+    display: inline-block;
+    padding: vars.$spacing-xs vars.$spacing-sm;
+    border-radius: vars.$border-radius-full;
+    font-size: vars.$font-size-sm;
+    font-weight: 500;
+    background-color: $bg-color;
+    color: $text-color;
+}
+
+// Page header
+@mixin page-header {
+    @include flex-between;
+    margin-bottom: vars.$spacing-xl;
+    
+    h1 {
+        color: vars.$primary-color;
+        margin: 0;
+    }
+}
+
+// Modal
+@mixin modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    @include flex-center;
+    z-index: 1000;
+}
+
+@mixin modal-content {
+    background-color: vars.$white;
+    padding: vars.$spacing-xl;
+    border-radius: vars.$border-radius-md;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: vars.$shadow-lg;
+    
+    h2 {
+        color: vars.$primary-color;
+        margin: 0 0 vars.$spacing-lg 0;
+    }
+}
+
+// Form group
+@mixin form-group {
+    margin-bottom: vars.$spacing-md;
+    
+    label {
+        display: block;
+        margin-bottom: vars.$spacing-sm;
+        color: vars.$black;
+        font-weight: 500;
+    }
+    
+    input, select, textarea {
+        @include input-base;
+    }
+}
+
+// Table
+@mixin table-base {
+    width: 100%;
+    border-collapse: collapse;
+    
+    th, td {
+        padding: vars.$spacing-md;
+        text-align: left;
+        border-bottom: 1px solid vars.$gray-300;
+    }
+    
+    th {
+        background-color: vars.$gray-200;
+        font-weight: 600;
+        color: vars.$black;
+    }
+    
+    tbody tr:hover {
+        background-color: vars.$gray-100;
+    }
+}

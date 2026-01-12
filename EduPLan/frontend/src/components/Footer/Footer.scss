@@ -1,0 +1,14 @@
+@use '../../styles/variables' as *;
+
+.footer {
+    background-color: $primary-color;
+    color: $white;
+    padding: $spacing-md $spacing-xl;
+    text-align: center;
+    margin-top: auto;
+    
+    p {
+        margin: $spacing-xs 0;
+        font-size: $font-size-sm;
+    }
+}

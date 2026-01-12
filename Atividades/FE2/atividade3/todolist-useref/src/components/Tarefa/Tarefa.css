@@ -1,0 +1,103 @@
+.tarefa {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.tarefa-concluida {
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  border: 2px solid #28a745;
+}
+
+.tarefa-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #eee;
+}
+
+.tarefa-concluida .tarefa-header {
+  border-bottom-color: #28a745;
+}
+
+.tarefa-header h3 {
+  flex-grow: 1;
+  margin: 0;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.tarefa-concluida .tarefa-header h3 {
+  color: #155724;
+}
+
+.badge-concluida {
+  background: #28a745;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.btn-remover-tarefa {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.btn-remover-tarefa:hover {
+  opacity: 1;
+}
+
+.passos-lista {
+  margin-bottom: 1rem;
+}
+
+.sem-passos {
+  color: #999;
+  font-style: italic;
+  text-align: center;
+  padding: 1rem;
+}
+
+.form-passo {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.form-passo input {
+  flex-grow: 1;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.form-passo input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.form-passo button {
+  background: #007bff;
+  color: white;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.form-passo button:hover {
+  background: #0056b3;
+}

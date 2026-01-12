@@ -1,0 +1,73 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.login-container {
+    min-height: 100vh;
+    @include flex-center;
+    background-color: $primary-color;
+}
+
+.login-box {
+    @include card;
+    padding: $spacing-xl;
+    box-shadow: $shadow-lg;
+    width: 100%;
+    max-width: 400px;
+    
+    h1 {
+        color: $primary-color;
+        text-align: center;
+        margin-bottom: $spacing-sm;
+    }
+    
+    .login-subtitle {
+        text-align: center;
+        color: $gray-600;
+        margin-bottom: $spacing-xl;
+    }
+    
+    .login-error {
+        background-color: $danger-bg;
+        color: $danger-color;
+        padding: 0.75rem;
+        border-radius: $border-radius-sm;
+        margin-bottom: $spacing-md;
+        text-align: center;
+    }
+    
+    .form-group {
+        @include form-group;
+    }
+    
+    button {
+        @include button-primary;
+        width: 100%;
+        padding: 0.75rem;
+        font-size: $font-size-base;
+    }
+    
+    .login-help {
+        margin-top: $spacing-lg;
+        padding-top: $spacing-lg;
+        border-top: 1px solid $gray-300;
+        text-align: center;
+        font-size: $font-size-sm;
+        color: $gray-600;
+        
+        p {
+            margin: $spacing-xs 0;
+        }
+    }
+    
+    .login-link {
+        margin-top: $spacing-md;
+        text-align: center;
+        font-size: $font-size-sm;
+        color: $gray-600;
+        
+        a {
+            color: $primary-color;
+            font-weight: 500;
+        }
+    }
+}

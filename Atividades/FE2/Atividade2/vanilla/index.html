@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Receitas Gostosas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- MENU LATERAL -->
+<div class="sidebar" id="sidebar">
+  <a href="#" class="close-btn" onclick="toggleMenu()">×</a>
+
+  <div class="menu-grupo">
+    <button class="menu-titulo" onclick="toggleSubmenu('submenu1')">Pratos ▾</button>
+    <ul id="submenu1" class="submenu">
+      <li><a href="#">Arroz</a></li>
+      <li><a href="#">Feijão</a></li>
+      <li><a href="#">Peixes</a></li>
+      <li><a href="#">Aves</a></li>
+      <li><a href="#">Massas</a></li>
+    </ul>
+  </div>
+
+  <div class="menu-grupo">
+    <button class="menu-titulo" onclick="toggleSubmenu('submenu2')">Sobremesas ▾</button>
+    <ul id="submenu2" class="submenu">
+      <li><a href="#">Bolos</a></li>
+      <li><a href="#">Doces</a></li>
+      <li><a href="#">Gelados</a></li>
+    </ul>
+  </div>
+
+  <div class="menu-grupo">
+    <button class="menu-titulo" onclick="toggleSubmenu('submenu3')">Bebidas ▾</button>
+    <ul id="submenu3" class="submenu">
+      <li><a href="#">Sucos</a></li>
+      <li><a href="#">Cocktails</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- CABEÇALHO -->
+<header>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <a href="index.html" class="home-icon">🏠</a>
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Pesquisar receitas...">
+    <span class="search-icon">🔍</span>
+  </div>
+  <span class="user-info">👤 Usuário</span>
+</header>
+
+<!-- CONTEÚDO PRINCIPAL -->
+<main>
+
+  <!-- Carrossel de receitas em destaque -->
+  <section class="receitas-slider">
+    <h2>Receitas em Destaque</h2>
+    <div class="slider" id="slider">
+      <div class="slide">
+        <div class="slide-img">🥕</div>
+        <h3>Bolo de Cenoura</h3>
+      </div>
+      <div class="slide">
+        <div class="slide-img">🍲</div>
+        <h3>Feijoada Completa</h3>
+      </div>
+      <div class="slide">
+        <div class="slide-img">🦐</div>
+        <h3>Moqueca de Camarão</h3>
+      </div>
+      <div class="slide">
+        <div class="slide-img">🥘</div>
+        <h3>Escondidinho</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Notícias -->
+  <section class="noticias">
+    <h2>Novidades e Dicas</h2>
+    <div class="noticia-grid">
+      <article class="noticia">
+        <div class="noticia-imagem">🍝</div>
+        <div class="noticia-conteudo">
+          <h3>Segredos da Culinária Italiana</h3>
+          <p>Aprenda a preparar massas frescas e molhos autênticos.</p>
+          <a href="#">Leia Mais</a>
+        </div>
+      </article>
+      
+      <article class="noticia">
+        <div class="noticia-imagem">👨‍🍳</div>
+        <div class="noticia-conteudo">
+          <h3>10 Dicas para Iniciantes</h3>
+          <p>Domine o básico e cozinhe com confiança.</p>
+          <a href="#">Leia Mais</a>
+        </div>
+      </article>
+      
+      <article class="noticia">
+        <div class="noticia-imagem">🥗</div>
+        <div class="noticia-conteudo">
+          <h3>Receitas Veganas Rápidas</h3>
+          <p>Opções deliciosas e nutritivas para o dia a dia.</p>
+          <a href="#">Leia Mais</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Lista de Receitas (dados mockados) -->
+  <section class="lista-receitas">
+    <h2>Todas as Receitas</h2>
+    <div class="receitas-grid" id="receitasGrid">
+      <!-- Dados mockados -->
+      <div class="receita-card">
+        <div class="receita-img">🍰</div>
+        <h3>Bolo de Chocolate</h3>
+        <p>Delicioso bolo caseiro</p>
+      </div>
+      <div class="receita-card">
+        <div class="receita-img">🍕</div>
+        <h3>Pizza Margherita</h3>
+        <p>Clássica italiana</p>
+      </div>
+      <div class="receita-card">
+        <div class="receita-img">🥗</div>
+        <h3>Salada Caesar</h3>
+        <p>Fresca e saudável</p>
+      </div>
+      <div class="receita-card">
+        <div class="receita-img">🍜</div>
+        <h3>Ramen Japonês</h3>
+        <p>Sopa tradicional</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- RODAPÉ -->
+<footer>
+  <p>&copy; 2025 Receitas Gostosas • Todos os direitos reservados</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

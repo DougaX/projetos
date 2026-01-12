@@ -1,0 +1,49 @@
+@use './styles/variables' as *;
+@use './styles/mixins' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+    background-color: $gray-200;
+    color: $black;
+    line-height: 1.6;
+}
+
+.app-layout {
+    min-height: 100vh;
+    @include flex-column;
+}
+
+.main-content {
+    flex: 1;
+    background-color: $gray-200;
+}
+
+.loading {
+    @include flex-center;
+    height: 200px;
+    font-size: $font-size-lg;
+    color: $gray-600;
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+button {
+    font-family: inherit;
+}
+
+input, textarea, select {
+    font-family: inherit;
+}

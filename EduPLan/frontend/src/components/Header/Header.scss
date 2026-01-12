@@ -1,0 +1,71 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.header {
+    background-color: $primary-color;
+    color: $white;
+    padding: $spacing-md $spacing-xl;
+    @include flex-between;
+    box-shadow: $shadow-sm;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    
+    &-logo {
+        a {
+            color: $white;
+            text-decoration: none;
+            font-size: $font-size-xl;
+            font-weight: bold;
+        }
+    }
+    
+    &-nav {
+        display: flex;
+        gap: $spacing-lg;
+        
+        a {
+            color: $white;
+            text-decoration: none;
+            padding: $spacing-sm $spacing-md;
+            border-radius: $border-radius-sm;
+            transition: background-color 0.2s;
+            
+            &:hover {
+                background-color: rgba($white, 0.1);
+            }
+        }
+    }
+    
+    &-user {
+        display: flex;
+        align-items: center;
+        gap: $spacing-md;
+        
+        span {
+            font-size: $font-size-sm;
+        }
+        
+        .user-tipo {
+            background-color: rgba($white, 0.2);
+            padding: $spacing-xs $spacing-sm;
+            border-radius: $border-radius-sm;
+            font-size: $font-size-sm;
+            text-transform: capitalize;
+        }
+        
+        button {
+            background-color: $white;
+            color: $primary-color;
+            border: none;
+            padding: $spacing-sm $spacing-md;
+            border-radius: $border-radius-sm;
+            cursor: pointer;
+            font-weight: 500;
+            
+            &:hover {
+                background-color: $gray-200;
+            }
+        }
+    }
+}

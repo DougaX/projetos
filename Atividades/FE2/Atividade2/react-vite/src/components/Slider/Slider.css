@@ -1,0 +1,60 @@
+.receitas-slider {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.receitas-slider h2 {
+  text-align: center;
+  color: #ff6600;
+  margin-bottom: 1.5rem;
+}
+
+.slider {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+}
+
+.slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.slider::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.slider::-webkit-scrollbar-thumb {
+  background: #ff6600;
+  border-radius: 4px;
+}
+
+.slide {
+  min-width: 200px;
+  background: #fff8f3;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.slide:hover {
+  transform: translateY(-5px);
+}
+
+.slide-img {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.slide h3 {
+  color: #ff6600;
+  font-size: 1rem;
+}
