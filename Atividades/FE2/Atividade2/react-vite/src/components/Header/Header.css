@@ -1,15 +1,24 @@
 .header {
   background: #ff6600;
-  padding: 1rem;
+  height: 70px;
+  padding: 0 1rem;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: space-between;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
+/* Área esquerda: menu + home */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Botão do menu */
 .menu-btn {
   font-size: 24px;
   background: none;
@@ -23,20 +32,30 @@
   transform: scale(1.1);
 }
 
+/* Ícone da Home */
 .home-icon {
   font-size: 1.5rem;
   color: white;
   text-decoration: none;
+  transition: transform 0.2s;
 }
 
+.home-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Barra de pesquisa */
 .search-bar {
-  position: relative;
-  flex-grow: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
   max-width: 600px;
 }
 
 .search-bar input {
   width: 100%;
+  box-sizing: border-box;
   padding: 0.6rem 2.5rem 0.6rem 1rem;
   border-radius: 50px;
   border: none;
@@ -48,6 +67,7 @@
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
 }
 
+/* Ícone da pesquisa */
 .search-icon {
   position: absolute;
   right: 1rem;
@@ -57,21 +77,43 @@
   font-size: 1.1rem;
 }
 
+/* Área direita: usuário */
 .user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
   color: white;
   font-weight: bold;
   white-space: nowrap;
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
   .header {
-    flex-wrap: wrap;
+    height: auto;
+    min-height: 70px;
   }
 
   .search-bar {
-    order: 1;
+    position: relative;
+    left: auto;
+    transform: none;
+    max-width: 400px;
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .header {
+    flex-wrap: wrap;
+    padding: 0.8rem;
+    gap: 0.8rem;
+  }
+
+  .search-bar {
+    order: 3;
     width: 100%;
-    margin-top: 1rem;
     max-width: 100%;
+    margin: 0;
   }
 }

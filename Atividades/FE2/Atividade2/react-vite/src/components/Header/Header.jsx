@@ -12,12 +12,19 @@ function Header({ onToggleMenu }) {
 
   return (
     <header className="header">
-      <button className="menu-btn" onClick={onToggleMenu}>
-        ☰
-      </button>
-      
-      <a href="/" className="home-icon">🏠</a>
-      
+
+      {/* Área esquerda */}
+      <div className="header-left">
+        <button className="menu-btn" onClick={onToggleMenu}>
+          ☰
+        </button>
+
+        <a href="/" className="home-icon">
+          🏠
+        </a>
+      </div>
+
+      {/* Barra de pesquisa central */}
       <div className="search-bar">
         <input
           type="text"
@@ -26,10 +33,18 @@ function Header({ onToggleMenu }) {
           onChange={(e) => setSearchTerm(e.target.value)}
           onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
         />
-        <span className="search-icon" onClick={handleSearch}>🔍</span>
+
+        <span className="search-icon" onClick={handleSearch}>
+          🔍
+        </span>
       </div>
-      
-      <span className="user-info">👤 Usuário</span>
+
+      {/* Área direita */}
+      <div className="user-info">
+        <span>👤</span>
+        <span>Usuário</span>
+      </div>
+
     </header>
   );
 }
