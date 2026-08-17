@@ -41,7 +41,7 @@ function Header({ onToggleMenu }) {
 
       {/* Área direita */}
       <div className="user-info">
-        <span>👤</span>
+        <span>S2</span>
         <span>Usuário</span>
       </div>
 
